@@ -1,0 +1,235 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	/*font:15px/1.5 Arial, Helvetica,sans-serif;   shortcut to replace the first 3 lines*/
+	padding:0;
+	margin:0;
+	background-color: #f4f4f4;
+}
+/*Global*/
+.container{
+	width:80%; 
+	margin:auto;
+	overflow: hidden;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+}
+.button_1{
+		height:38px;
+		background:#e8491d;
+		border:0;/*or none*/
+		padding-left: 20;
+		padding-right: 20;
+		color:#fff;
+}
+
+.dark{
+	padding:15px;
+	background-color:  #312f5d;
+	color:#fff;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+/*Header*/
+header{
+	background-color:  #312f5d;
+	color:#fff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid; /*color,width type*/
+}
+
+/*Header*/
+header a{  /*or I can just use "a" without "header" if there no other links to style*/
+	color:#fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	float:left;
+}
+
+header#branding h1{
+	margin:0;
+}
+
+header nav{
+	float:right;
+	margin-top: 10px;
+}
+
+header .highlight, header .current a{
+	color:#e8491d;
+	font-weight: bold;
+}
+
+header a:hover{
+	color:#ccc;
+	font-weight: bold;
+}
+
+/*Showcase*/
+#showcase{
+	min-height: 400px;
+	background:url('../images/showcase.jpg') no-repeat 0 -400px ;
+	text-align: center;
+	color:#fff;
+}
+
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+#showcase p{
+	font-size: 20px;
+}
+
+/*Slider*/
+.slider{
+	width: 800px auto;
+	height: 50px;
+	background: url('../images/html.png');
+	margin: 10px auto;
+	animation:slide 10s infinite;
+}
+@keyframes slide{
+	25%{
+		background: url('../images/css.png');
+	}
+	50%{
+		background: url('../images/js.png');
+	}
+	75%{background: url('../images/html.png');
+	}
+}
+
+/*Newsletter*/
+#newsletter{
+	padding:5px;
+	color:#fff;
+	background-color: #35424a;
+}
+
+#newsletter h1{
+	float:left;
+}
+
+#newsletter form{
+	float:right;
+	margin-top:5px;
+}
+
+#newsletter input[type="email"]{
+	padding:4px;
+	height:25px;
+	width:250px;
+}
+
+/*Boxes*/
+#boxes{
+	margin-top: 20px;
+}
+
+#boxes .box{
+	float:left;
+	text-align: center;
+	width: 30%;
+	padding:10px;
+}
+
+#boxes .box img{
+	width: 90px;
+}
+
+/*Sidebar*/
+aside#sidebar{ /*for the function to work I must type aside#sidebar or only "#sidebar", but no "aside #sidebar"*/
+	float:right;
+	width:20%;
+	margin-top: 10px;
+}
+
+ aside#sidebar .quote input, aside#sidebar .quote textarea{
+	width:90%;
+	padding:5px;
+}
+
+/*Main-col*/
+article#main-col{
+	float:left;
+	width:65%;
+}
+
+/*Posts*/
+ul#posts li{
+	list-style: none;
+	padding: 20px;
+	border:#ccc solid 1px;
+	margin-bottom: 5px;
+	background-color: #e6e6e6;
+}
+
+
+
+footer{
+	padding:20px;
+	margin:20px;
+	color:#fff;
+	background-color: #e8491d;
+	text-align: center; 
+}
+
+
+/*Media Queries*/
+@media(max-width: 768px){
+	/*to test the previous function we use next function - body{
+		display:none;
+	}*/
+	
+	header #branding,
+	header nav,
+	header li,
+	#newsletter h1,
+	#newsletter form,
+	#boxes .box,
+	article#main-col,
+	aside#sidebar
+	{
+		float: none;
+		text-align:center;
+		width: 100%;
+	}
+
+	header{
+		padding-bottom: 20px;
+	}
+	#showcase h1{
+		margin-top: 40px;
+	}
+	#newsletter button, .quote button{
+		display:block;
+		width:100%;
+	}
+
+#newsletter form input[type="email"]{
+	width:100%;
+	margin-bottom: 5px;
+	}
+	#newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}
